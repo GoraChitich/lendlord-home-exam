@@ -40,9 +40,11 @@ if (runMode === 'app') {
   )
 
   app.use(router.routes())
+  .use(router.allowedMethods())
 }
 
 const port = config.ports[runMode]
 
+log.info('process.env.RUN_MOD',process.env.RUN_MOD);
 log.info(`started in ${APP_ENV} env, listening to port ${port}`)
 app.listen(port)
