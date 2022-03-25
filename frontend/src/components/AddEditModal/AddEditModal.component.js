@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { useEffect } from "react";
 import { useState } from "react";
-import { Card, Col, Container, Row, Table, Button, Modal, Form } from "react-bootstrap";
+import {  Col, Row, Button, Modal, Form } from "react-bootstrap";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DatePicker from "react-datepicker";
@@ -95,8 +95,7 @@ export default function AddEditModal({ person, showDialogF, showDialog, arrManag
 
   
   console.log("arrManagers",arrManagers);
-  const optionsManagers = arrManagers?.length? arrManagers.map(el => <option value={el._id}>{el.firstName + " " + el.lastName}</option>): null;
-
+  const optionsManagers = arrManagers?.length? arrManagers.map(el => <option key={el._id} value={el._id}>{el.firstName + " " + el.lastName}</option>): null;
 
   if (showDialog)
     return (
@@ -139,9 +138,9 @@ export default function AddEditModal({ person, showDialogF, showDialog, arrManag
                 <Col sm={9}>
                   <Form.Select defaultValue={role} onChange={(e)=>updateRole(e.target.value)}  required disabled={roleDisabled} >
                     <option value={""} >No selected</option>
-                    <option value={USER_ROLES.MANAGER}>{USER_ROLES.MANAGER}</option>
-                    <option value={USER_ROLES.DRIVER}>{USER_ROLES.DRIVER}</option>
-                    <option value={USER_ROLES.WORKER}>{USER_ROLES.WORKER}</option>
+                    <option key={USER_ROLES.MANAGER} value={USER_ROLES.MANAGER}>{USER_ROLES.MANAGER}</option>
+                    <option key={USER_ROLES.DRIVER} value={USER_ROLES.DRIVER}>{USER_ROLES.DRIVER}</option>
+                    <option key={USER_ROLES.WORKER} value={USER_ROLES.WORKER}>{USER_ROLES.WORKER}</option>
                   </Form.Select>
                 </Col>
               </Form.Group>
