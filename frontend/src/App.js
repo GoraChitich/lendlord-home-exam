@@ -1,6 +1,6 @@
 import logo from './assets/lendlord.png'
 import './App.css';
-import List from './components/list/list.component';
+import List from './components/List/List.component';
 
 function App() {
 

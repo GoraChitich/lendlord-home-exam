@@ -13,14 +13,15 @@ router.get('/getUserById/:id', async(ctx, next) => {
     ctx.body = result;
   });
   router.post('/update/:id', (ctx, next) => {
-    users.updateOne({_id:new ObjectId(ctx.params.id)},JSON.parse(ctx.request.body));
+    console.log(ctx.request.body);
+    users.updateOne({_id:new ObjectId(ctx.params.id)},(ctx.request.body));
     ctx.body = {result: "ok"};
   });
   router.post('/create', (ctx, next) => {
-    users.create(JSON.parse(ctx.request.body));
+    users.create((ctx.request.body));
     ctx.body = {result: "ok"};
   });
-  router.delete('/delete/:id', (ctx, next) => {
+  router.get('/delete/:id', (ctx, next) => {
     users.deleteOne({_id:new ObjectId(ctx.params.id)});
     ctx.body = {result: "ok"};
   });

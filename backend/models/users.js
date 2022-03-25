@@ -12,7 +12,7 @@ const schema = new mongoose.Schema(
     email: { type: String, required: true, trim: true },
     dateStarted: { type: Date, required: true, trim: true },
     salary: { type: Number, required: true },
-    role: { type: SchemaTypes.ObjectId, required: false},
+    role: { type: String, required: true},
     manager: {type: SchemaTypes.ObjectId, required:false}
   },
   { strict: false, autoCreate: true, timestamps: true }
