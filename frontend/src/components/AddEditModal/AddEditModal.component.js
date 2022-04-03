@@ -30,7 +30,7 @@ export default function AddEditModal({ person, showDialogF, showDialog, arrManag
       updateSalary("");
       updateManager("");
     }else{
-      const url = 'http://localhost:3000/getManagerAndEmployees/'+person._id;
+      const url = process.env.REACT_APP_API_URL+'/getManagerAndEmployees/'+person._id;
             axios({
                 method: 'get',
                 url: url
@@ -64,16 +64,19 @@ export default function AddEditModal({ person, showDialogF, showDialog, arrManag
         email,
         dateStarted: moment(dateStarted).format("YYYY-MM-DD"),
         salary: salary,
-        manager: manager,
         role: role
       }
-      console.log(JSON.stringify(personJson));
+
+      if(manager)
+        personJson.manager = manager;
+      
+        console.log(JSON.stringify(personJson));
       let url = "";
       if(person){
-        url = 'http://localhost:3000/update/'+person._id;
+        url = process.env.REACT_APP_API_URL+'/update/'+person._id;
         
       }else{
-        url = 'http://localhost:3000/create/'
+        url = process.env.REACT_APP_API_URL+'/create/'
       }
       axios.post(url,personJson)
         .then(response => {

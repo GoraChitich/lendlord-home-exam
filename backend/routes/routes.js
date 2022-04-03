@@ -18,6 +18,7 @@ router.get('/getUserById/:id', async(ctx, next) => {
     ctx.body = {result: "ok"};
   });
   router.post('/create', (ctx, next) => {
+    console.log(ctx.request.body);
     users.create((ctx.request.body));
     ctx.body = {result: "ok"};
   });

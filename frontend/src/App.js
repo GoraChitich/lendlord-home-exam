@@ -1,7 +1,7 @@
 import logo from './assets/lendlord.png'
 import './App.css';
 import List from './components/List/List.component';
-
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 function App() {
 
   return (

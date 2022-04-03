@@ -30,7 +30,7 @@ export default function List(props) {
 
     useEffect(()=>console.log("arrPersons.length",arrPersons.length), [arrPersons]);
     const reloadList = () =>{
-        const url = 'http://localhost:3000/getAllUsers'
+        const url = process.env.REACT_APP_API_URL+'/getAllUsers'
             axios({
                 method: 'get',
                 url: url

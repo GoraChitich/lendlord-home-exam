@@ -19,7 +19,7 @@ export default function ListRow({element, arrManagers, setNeedUpdate}){
 
     const deleteElement =(element) =>{
         //checking ability for deleting of record
-        const url = 'http://localhost:3000/getManagerAndEmployees/'+element._id
+        const url = process.env.REACT_APP_API_URL+'/getManagerAndEmployees/'+element._id
             axios({
                 method: 'get',
                 url: url
@@ -28,7 +28,7 @@ export default function ListRow({element, arrManagers, setNeedUpdate}){
                     alert("This element have some relations as manager with other elements. Can't delete it!")
                 }else{
                     if(window.confirm("Do you want to delete "+element.firstName+" "+element.lastName+"?")){
-                        const url = 'http://localhost:3000/delete/'+element._id
+                        const url = process.env.REACT_APP_API_URL+'/delete/'+element._id
                         axios({
                             method: 'get',
                             url: url
