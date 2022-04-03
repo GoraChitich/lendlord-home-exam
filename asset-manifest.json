@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/lenglord-home-exam/static/css/main.a9877ad7.css",
+    "main.js": "/lenglord-home-exam/static/js/main.3b7a2982.js",
+    "static/js/787.cda612ba.chunk.js": "/lenglord-home-exam/static/js/787.cda612ba.chunk.js",
+    "static/media/lendlord.png": "/lenglord-home-exam/static/media/lendlord.352d6ba9bffe57e702ea.png",
+    "static/media/trash-can-solid.svg": "/lenglord-home-exam/static/media/trash-can-solid.80ad713adbe349bae510ea54dbe442b3.svg",
+    "static/media/pen-to-square-solid.svg": "/lenglord-home-exam/static/media/pen-to-square-solid.0f2469edf27db7a4a8ce9e3415af8fef.svg",
+    "index.html": "/lenglord-home-exam/index.html",
+    "static/media/circle-plus-solid.svg": "/lenglord-home-exam/static/media/circle-plus-solid.1071c7a1ec2124d3c63cdaef3cc30507.svg",
+    "main.a9877ad7.css.map": "/lenglord-home-exam/static/css/main.a9877ad7.css.map",
+    "main.3b7a2982.js.map": "/lenglord-home-exam/static/js/main.3b7a2982.js.map",
+    "787.cda612ba.chunk.js.map": "/lenglord-home-exam/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9877ad7.css",
+    "static/js/main.3b7a2982.js"
+  ]
+}
